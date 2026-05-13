@@ -28,25 +28,23 @@ document.querySelector('#app').innerHTML = `
 `;
 
 // 2. Intersection Observer for Fade-in effects
-// Use threshold:0 so even 1px of the element triggers it — critical for tall mobile sections
+// threshold:0 so even 1px triggers it — critical for tall mobile sections
 const observerOptions = {
   root: null,
-  rootMargin: '0px 0px -80px 0px', // trigger slightly before fully in view
+  rootMargin: '0px 0px -80px 0px',
   threshold: 0
 };
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target); // stop watching once visible
+      obs.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-document.querySelectorAll('.fade-in-section').forEach((section) => {
-  observer.observe(section);
-});
+document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
 
 // 3. Hamburger Menu Logic
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -64,16 +62,13 @@ if (mobileMenuBtn && mobileNavOverlay) {
     }
   });
 
-  // Close menu when a link is clicked
   const mobileLinks = mobileNavOverlay.querySelectorAll('a');
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenuBtn.classList.remove('active');
       mobileNavOverlay.classList.remove('active');
       document.body.style.overflow = '';
-      if (whatsappFloat) {
-        whatsappFloat.style.display = 'flex';
-      }
+      if (whatsappFloat) whatsappFloat.style.display = 'flex';
     });
   });
 }
@@ -84,69 +79,25 @@ const sweetCards = document.querySelectorAll('.sweet-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Remove active class from all
     filterBtns.forEach(b => b.classList.remove('active'));
-    // Add to clicked
     btn.classList.add('active');
-    
+
     const filterValue = btn.getAttribute('data-filter');
-    
     sweetCards.forEach(card => {
-      if (card.getAttribute('data-category') === filterValue) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = card.getAttribute('data-category') === filterValue ? 'block' : 'none';
     });
   });
 });
 
-// 5. Hero Canvas Animation Loop
-const canvas = document.getElementById('hero-canvas');
-if (canvas) {
-  const ctx = canvas.getContext('2d');
-  const frameCount = 80;
-  const images = [];
-  let imagesLoaded = 0;
-  
-  // Preload images
-  for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    // Assuming filenames are zero-padded: hero element animation_000.jpg
-    const zeroPaddedIndex = i.toString().padStart(3, '0');
-    img.src = `/hero_frames/hero element animation_${zeroPaddedIndex}.jpg`;
-    img.onload = () => {
-      imagesLoaded++;
-      if (imagesLoaded === frameCount) {
-        startAnimation();
-      }
-    };
-    images.push(img);
-  }
-
-  let currentFrame = 0;
-  
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-
-  function startAnimation() {
-    setInterval(() => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const img = images[currentFrame];
-      
-      // Calculate object-cover style drawing
-      const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
-      const x = (canvas.width / 2) - (img.width / 2) * scale;
-      const y = (canvas.height / 2) - (img.height / 2) * scale;
-      
-      ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
-      
-      currentFrame = (currentFrame + 1) % frameCount;
-    }, 1000 / 24); // 24 FPS
-  }
+// 5. Video source swap for mobile vs desktop
+// The <source media> attribute is not live-responsive, so we handle it via JS
+const heroVideo = document.getElementById('hero-video');
+if (heroVideo) {
+  const isMobile = window.innerWidth <= 768;
+  const src = isMobile
+    ? '/hero element mobile.mp4'
+    : '/hero element laptop.mp4';
+  heroVideo.src = src;
+  heroVideo.load();
+  heroVideo.play().catch(() => {}); // suppress autoplay policy errors silently
 }
