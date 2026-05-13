@@ -28,16 +28,18 @@ document.querySelector('#app').innerHTML = `
 `;
 
 // 2. Intersection Observer for Fade-in effects
+// Use threshold:0 so even 1px of the element triggers it — critical for tall mobile sections
 const observerOptions = {
   root: null,
-  rootMargin: '0px',
-  threshold: 0.15
+  rootMargin: '0px 0px -80px 0px', // trigger slightly before fully in view
+  threshold: 0
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target); // stop watching once visible
     }
   });
 }, observerOptions);
