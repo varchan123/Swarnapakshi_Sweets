@@ -25,7 +25,7 @@ export const story = `
         
         <div class="story-image">
           <div class="image-frame polaroid-style">
-            <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional Indian Sweets Making">
+            <img src="/pics/1.jpg" alt="Traditional Indian Sweets Making">
           </div>
         </div>
       </div>
