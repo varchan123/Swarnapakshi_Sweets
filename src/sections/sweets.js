@@ -28,7 +28,7 @@ export const sweets = `
         <!-- LADOOS -->
         <div class="sweet-card polaroid-style hover-glow" data-category="ladoos">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Motichoor Ladoo">
+            <img loading="lazy" src="/pics/pic.jpg" alt="Motichoor Ladoo">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Motichoor Ladoo</h4>
@@ -39,7 +39,7 @@ export const sweets = `
         
         <div class="sweet-card polaroid-style hover-glow" data-category="ladoos">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Besan Ladoo">
+            <img loading="lazy" src="/pics/pic2.jpg" alt="Besan Ladoo">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Besan Ladoo</h4>
@@ -50,7 +50,7 @@ export const sweets = `
 
         <div class="sweet-card polaroid-style hover-glow" data-category="ladoos">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/13063302/pexels-photo-13063302.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Boondi Ladoo">
+            <img loading="lazy" src="/pics/pic3.jpg" alt="Boondi Ladoo">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Boondi Ladoo</h4>
@@ -62,7 +62,7 @@ export const sweets = `
         <!-- BARFIS (hidden by default) -->
         <div class="sweet-card polaroid-style hover-glow" data-category="barfis" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Kaju Katli">
+            <img loading="lazy" src="/pics/1.jpg" alt="Kaju Katli">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Kaju Katli</h4>
@@ -71,9 +71,9 @@ export const sweets = `
           </div>
         </div>
         
-        <div class="sweet-card polaroid-style hover-glow" data-category="barfis">
+        <div class="sweet-card polaroid-style hover-glow" data-category="barfis" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Pista Barfi">
+            <img loading="lazy" src="/pics/2.jpg" alt="Pista Barfi">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Pista Barfi</h4>
@@ -82,9 +82,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="barfis">
+        <div class="sweet-card polaroid-style hover-glow" data-category="barfis" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/13063302/pexels-photo-13063302.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Coconut Barfi">
+            <img loading="lazy" src="/pics/3.jpg" alt="Coconut Barfi">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Coconut Barfi</h4>
@@ -96,7 +96,7 @@ export const sweets = `
         <!-- HALWA (hidden by default) -->
         <div class="sweet-card polaroid-style hover-glow" data-category="halwa" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Ghee Mysore Pak">
+            <img loading="lazy" src="/pics/4.png" alt="Ghee Mysore Pak">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Ghee Mysore Pak</h4>
@@ -105,9 +105,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="halwa">
+        <div class="sweet-card polaroid-style hover-glow" data-category="halwa" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Badam Halwa">
+            <img loading="lazy" src="/pics/pic.jpg" alt="Badam Halwa">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Badam Halwa</h4>
@@ -116,9 +116,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="halwa">
+        <div class="sweet-card polaroid-style hover-glow" data-category="halwa" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/13063302/pexels-photo-13063302.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Wheat Halwa">
+            <img loading="lazy" src="/pics/pic2.jpg" alt="Wheat Halwa">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Wheat Halwa</h4>
@@ -130,7 +130,7 @@ export const sweets = `
         <!-- SNACKS (hidden by default) -->
         <div class="sweet-card polaroid-style hover-glow" data-category="snacks" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Madras Mixture">
+            <img loading="lazy" src="/pics/pic3.jpg" alt="Madras Mixture">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Madras Mixture</h4>
@@ -139,9 +139,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="snacks">
+        <div class="sweet-card polaroid-style hover-glow" data-category="snacks" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Murukku">
+            <img loading="lazy" src="/pics/1.jpg" alt="Murukku">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Butter Murukku</h4>
@@ -150,9 +150,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="snacks">
+        <div class="sweet-card polaroid-style hover-glow" data-category="snacks" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/13063302/pexels-photo-13063302.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Ribbon Pakoda">
+            <img loading="lazy" src="/pics/2.jpg" alt="Ribbon Pakoda">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Ribbon Pakoda</h4>
@@ -164,7 +164,7 @@ export const sweets = `
         <!-- SEASONAL (hidden by default) -->
         <div class="sweet-card polaroid-style hover-glow" data-category="seasonal" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Mini Jangiri">
+            <img loading="lazy" src="/pics/3.jpg" alt="Mini Jangiri">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Mini Jangiri</h4>
@@ -173,9 +173,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="seasonal">
+        <div class="sweet-card polaroid-style hover-glow" data-category="seasonal" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Sweet Somas">
+            <img loading="lazy" src="/pics/4.png" alt="Sweet Somas">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Sweet Somas</h4>
@@ -184,9 +184,9 @@ export const sweets = `
           </div>
         </div>
 
-        <div class="sweet-card polaroid-style hover-glow" data-category="seasonal">
+        <div class="sweet-card polaroid-style hover-glow" data-category="seasonal" style="display:none">
           <div class="card-img">
-            <img loading="lazy" src="https://images.pexels.com/photos/13063302/pexels-photo-13063302.jpeg?auto=compress&cs=tinysrgb&w=300&q=50" alt="Athirasam">
+            <img loading="lazy" src="/pics/pic.jpg" alt="Athirasam">
           </div>
           <div class="card-content text-center">
             <h4 class="font-subhead">Athirasam</h4>
